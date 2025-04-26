@@ -18,6 +18,10 @@ function Content() {
     { label: "Average Temp.", value: currentPlanet.temperature },
   ];
 
+  if (!currentPlanet) {
+    return <div>Planet not found</div>;
+  }
+
   return (
     <>
       <section className="w-full">
